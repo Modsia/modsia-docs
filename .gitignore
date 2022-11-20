@@ -1,0 +1,5 @@
+.idea
+*~
+venv
+docs/build
+docs/source/fontconfig

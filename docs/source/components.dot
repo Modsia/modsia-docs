@@ -1,0 +1,23 @@
+digraph Modsia_arch {
+    rankdir="TB";
+    UI [shape="box"];
+    subgraph middleware {
+        rank="same";
+        ordering="in";
+        PulseAudio [shape="ellipse"];
+        Hub [shape="box"];
+        Skills [shape="box"];
+    }
+    subgraph STT {
+        rank="same";
+        Attention [shape="rectangle", style="rounded"];
+        STT1 [shape="box"];
+        STT2 [shape="box"];
+    }
+    UI -> Hub [dir="both"];
+    PulseAudio -> Hub;
+    Hub -> Skills;
+    Hub -> Attention [dir="both"];
+    Hub -> STT1 [dir="both"];
+    Hub -> STT2 [dir="both"];
+}
